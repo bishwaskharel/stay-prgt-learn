@@ -1,6 +1,47 @@
 @import "~antd/dist/antd.css";
+
+* {
+  background-color: rgb(154, 135, 222);
+  color: white;
+  box-sizing: border-box;
+}
+
 h1 {
-  min-height: 100vh;
-  color: aliceblue;
-  background-color: rgb(118, 177, 131);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: darkorange;
+}
+
+h2 {
+  color: rgb(38, 38, 100);
+  margin-left: 1rem;
+  font-weight: 700;
+}
+
+h3 {
+  color: white;
+  margin-left: 1rem;
+}
+
+button {
+  color: rgb(255, 255, 255);
+  border: none;
+  background-color: rgb(38, 38, 100);
+  padding: 1rem 2rem;
+  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(69, 69, 136);
+}
+
+textarea {
+  background-color: rgb(255, 255, 255);
+  margin-left: 1rem;
+  border-radius: 1rem;
+  color: black;
 }
