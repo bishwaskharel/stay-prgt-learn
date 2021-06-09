@@ -1,35 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 
-const TweetEntry = () => {
-  const [msg, setMsg] = useState("");
-
-  const buttonHandler = (e) => {
-    console.log("Hello Bitch");
-    setMsg("Hello");
-  };
-
-  const [text, setText] = useState("");
-
+const TweetEntry = ({ text, setText, tweets, setTweets }) => {
   const textHandler = (e) => {
     setText(e.target.value);
   };
 
+  const tweetHandler = (e) => {
+    e.preventDefault();
+    setTweets([...tweets, text]);
+    setText("");
+  };
+
   return (
-    <form>
+    <form onSubmit={tweetHandler}>
       <textarea
         value={text}
         onChange={textHandler}
         cols="30"
         rows="4"
       ></textarea>
-      <button type="button" onClick={buttonHandler}>
-        Tweet
-      </button>
-      <button type="button" onClick={() => setText("")}>
-        Reset
-      </button>
-      <h2>{text}</h2>
-      <h1>{msg}</h1>
+      <button type="submit">Tweet</button>
     </form>
   );
 };
