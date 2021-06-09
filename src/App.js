@@ -16,7 +16,7 @@ function App() {
         tweets={tweets}
         setTweets={setTweets}
       />
-      <TweetList author={name} tweets={tweets} />
+      <TweetList author={name} tweets={tweets} setTweets={setTweets} />
     </div>
   );
 }
