@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const TweetEntry = ({ text, setText, tweets, setTweets }) => {
   const textHandler = (e) => {
@@ -7,7 +8,7 @@ const TweetEntry = ({ text, setText, tweets, setTweets }) => {
 
   const tweetHandler = (e) => {
     e.preventDefault();
-    setTweets([...tweets, text]);
+    setTweets([...tweets, { message: text, id: uuidv4() }]);
     setText("");
   };
 
